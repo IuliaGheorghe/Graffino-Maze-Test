@@ -1,4 +1,5 @@
-let startBttn = document.querySelector('button');
+let startBttn = document.querySelector('#start-bttn');
+let resetBttn = document.querySelector('#reset-bttn');
 let form = document.querySelector('form');
 let container = document.getElementById('container')
 let canvas = document.querySelector('canvas');
@@ -28,8 +29,6 @@ function setMap(width, height, bricks){
             secondMap[i].push(false);
 
         }
-
-        console.log(firstMap)
     
         startPointX--;
         startPointY--;
@@ -60,10 +59,6 @@ function setMap(width, height, bricks){
             secondMap[xRandom][yRandom] = true;
         }
 }
-
-console.log(firstMap)
-
-
 
 function fillRectangle(i,j){
     ctx.fillRect(
@@ -129,8 +124,14 @@ let start = function(){
 
 }
 
+let reset = function(){
+    location.reload();
 
-startBttn.addEventListener('click', start)
+}
+
+
+startBttn.addEventListener('click', start);
+resetBttn.addEventListener('click', reset);
 
 window.onload = function(){
     ctx.canvas.width = 0.74 * window.innerWidth;
