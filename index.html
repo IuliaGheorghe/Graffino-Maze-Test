@@ -8,50 +8,60 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <form method="GET">
-        <div class="field extended">
-            <label for="maze-width">Maze Width:</label>
-            <input type="number" id="maze-width" min="1">
-        </div>
-        <div class="field extended">
-            <label for="maze-width">Maze Height:</label>
-            <input type="number" id="maze-height" min="1">
-        </div>
-        <div id="points-container" class="field inline">
-            <div id="start-point" class="point">
-                <label for="start-point-coordinates">Start Point:</label>
-                <div id="start-point-coordinates">
-                    <div class="field inline">
-                        <label for="start-x">x:</label>
-                        <input type="number" id="start-x" min="1">
+    <div id="container">
+        <form method="GET">
+            <div class="field extended">
+                <label for="maze-width">Maze Width:</label>
+                <input type="number" id="maze-width" min="1" value="3">
+            </div>
+            <div class="field extended">
+                <label for="maze-width">Maze Height:</label>
+                <input type="number" id="maze-height" min="1" value="3">
+            </div>
+            <div id="points-container" class="field inline">
+                <div id="start-point" class="point">
+                    <label for="start-point-coordinates">Start Point:</label>
+                    <div id="start-point-coordinates">
+                        <div class="field inline">
+                            <label for="start-x">x:</label>
+                            <input type="number" id="start-x" min="1" value="1">
+                        </div>
+                        <div class="field inline">
+                            <label for="start-y">y:</label>
+                            <input type="number" id="start-y" min="1" value="3">
+                        </div>
                     </div>
-                    <div class="field inline">
-                        <label for="start-y">y:</label>
-                        <input type="number" id="start-y" min="1">
+                </div>
+                <div id="end-point" class="point">
+                    <label for="end-point-coordinates">End Point:</label>
+                    <div id="end-point-coordinates">
+                        <div class="field inline">
+                            <label for="end-x">x:</label>
+                            <input type="number" id="end-x" min="1" value="3">
+                        </div>
+                        <div class="field inline">
+                            <label for="end-y">y:</label>
+                            <input type="number" id="end-y" min="1" value="1">
+                        </div>
                     </div>
                 </div>
             </div>
-            <div id="end-point" class="point">
-                <label for="end-point-coordinates">End Point:</label>
-                <div id="end-point-coordinates">
-                    <div class="field inline">
-                        <label for="end-x">x:</label>
-                        <input type="number" id="end-x" min="1">
-                    </div>
-                    <div class="field inline">
-                        <label for="end-y">y:</label>
-                        <input type="number" id="end-y" min="1">
-                    </div>
-                </div>
+            <div class="field extended">
+                <label for="brick-density">Brick Density (%):</label>
+                <input type="number" id="brick-density" min="0" max="99" value="10">
             </div>
-        </div>
+            <button type="button">Start</button>
+        </form>
+        <section id="canvas-container">
+            <canvas></canvas>
+        </section>
+    </div>
+    
             
-        <div class="field extended">
-            <label for="brick-density">Brick Density (%):</label>
-            <input type="number" id="brick-density" min="0" max="99">
-        </div>
-        <button type="button">Start</button>
-    </form>
+        
+    
+
+<script src="maze.js"></script>
 
 </body>
 </html>

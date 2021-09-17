@@ -8,13 +8,17 @@ body{
 }
 
 form{
+    width: 30%;
+    position: absolute;
+    left: 35vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
     padding: 1in;
     background-color: #fcfcfc;
     border-radius: 20px;
-    height: 50vh;
+    height: 80vh;
+    box-sizing: border-box;
     -webkit-box-shadow: 8px -6px 25px -2px rgba(0,0,0,0.47); 
     box-shadow: 8px -6px 25px -2px rgba(0,0,0,0.47);
 }
@@ -83,4 +87,33 @@ button{
 button:hover{
     background-color: #7c6de9;
     cursor: pointer;
+}
+
+.transition{
+    left: -0.5in;
+    transition:left 1s ease-in-out;
+    -webkit-transition:left 1s ease-in-out;
+}
+
+canvas{
+    background-color: #d1d8e0;
+    display: none;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+
+    
+}
+
+#canvas-container{
+    width: calc(70% + 0.5in);
+    align-self: flex-end;
+}
+
+#container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 80vh;
 }
