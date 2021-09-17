@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maze Test</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form method="GET">
+        <div class="field extended">
+            <label for="maze-width">Maze Width:</label>
+            <input type="number" id="maze-width" min="1">
+        </div>
+        <div class="field extended">
+            <label for="maze-width">Maze Height:</label>
+            <input type="number" id="maze-height" min="1">
+        </div>
+        <div id="points-container" class="field inline">
+            <div id="start-point" class="point">
+                <label for="start-point-coordinates">Start Point:</label>
+                <div id="start-point-coordinates">
+                    <div class="field inline">
+                        <label for="start-x">x:</label>
+                        <input type="number" id="start-x" min="1">
+                    </div>
+                    <div class="field inline">
+                        <label for="start-y">y:</label>
+                        <input type="number" id="start-y" min="1">
+                    </div>
+                </div>
+            </div>
+            <div id="end-point" class="point">
+                <label for="end-point-coordinates">End Point:</label>
+                <div id="end-point-coordinates">
+                    <div class="field inline">
+                        <label for="end-x">x:</label>
+                        <input type="number" id="end-x" min="1">
+                    </div>
+                    <div class="field inline">
+                        <label for="end-y">y:</label>
+                        <input type="number" id="end-y" min="1">
+                    </div>
+                </div>
+            </div>
+        </div>
+            
+        <div class="field extended">
+            <label for="brick-density">Brick Density (%):</label>
+            <input type="number" id="brick-density" min="0" max="99">
+        </div>
+        <button type="button">Start</button>
+    </form>
+
+</body>
+</html>
